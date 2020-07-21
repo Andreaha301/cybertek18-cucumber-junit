@@ -8,14 +8,14 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
 
         // Adding {} allow us to add more than one plugin
-        plugin = {"html:target/cucumber-report.html",
-                "rerun:target/rerun.txt", "json:target/cucumber.json"
+        plugin = {"html:target/cucumber-report.html"
+                , "json:target/cucumber.json","rerun:target/rerun.txt"
         },
         //"json:target/cucumber.json"
         features = "src\\test\\resources\\features",
         glue = "com\\cybertek\\step_definitions",
         dryRun = false,
-        tags = "@wiki"
+        tags = "@scenarioOutline"
 
 )
 
